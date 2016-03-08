@@ -42,7 +42,7 @@ angular.module("Eggly", [
       category: $scope.currentCategory.name
     }
   }
-
+  // Create Bookmark
   function createBookmark(bookmark) {
     bookmark.id = $scope.bookmarks.length;
     $scope.bookmarks.push(bookmark);
@@ -64,7 +64,7 @@ angular.module("Eggly", [
   function setEditedBookmark(bookmark) {
     $scope.editedBookmark = angular.copy(bookmark);
   };
-
+  // Edit Bookmark
   function updateBookmark(bookmark) {
     var index = _.findIndex($scope.bookmarks, function(b) {
       return b.id == bookmark.id;
